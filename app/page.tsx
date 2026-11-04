@@ -21,7 +21,7 @@ const projects = [
   { n: "02", name: "Rivlux Media", type: "Media & digital platform", url: "https://rivluxmedia.com", stack: "TypeScript / React / Node.js", img: "/projects/rivlux-media.png", description: "A media-focused website with a bold visual identity and dynamic presentation.", color: "lavender", shape:"◌", tag:"DIGITAL PRESENCE" },
   { n: "03", name: "Rive", type: "Interactive design platform", url: "https://rive.app", stack: "TypeScript / React", img: "/projects/rive.png", description: "A product platform built around interactive animation and design tooling.", color: "mint", shape:"✦", tag:"INTERACTION FIRST" },
   { n: "04", name: "Lusion", type: "Immersive web experience", url: "https://lusion.co", stack: "TypeScript / React / Three.js", img: "/projects/lusion.png", description: "An immersive experience combining 3D, interaction, and digital storytelling.", color: "blue", shape:"◎", tag:"IMMERSIVE WEB" },
-  { n: "05", name: "SnapSite CM", type: "Web application", url: "https://snapsitecm.com", stack: "TypeScript / C# .NET / Python", img: "/projects/snapsite-cm.png", description: "A full-stack project connecting modern frontend development with backend and Python engineering.", color: "yellow", shape:"↗", tag:"FULL-STACK BUILD" },
+  { n: "05", name: "SnapSite CMTTTTTTTTTTTT", type: "Web application", url: "https://snapsitecm.com", stack: "TypeScript / C# .NET / Python", img: "/projects/snapsite-cm.png", description: "A full-stack project connecting modern frontend development with backend and Python engineering.", color: "yellow", shape:"↗", tag:"FULL-STACK BUILD" },
 ];
 
 export default function Home() {

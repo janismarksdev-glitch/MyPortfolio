@@ -133,6 +133,45 @@ export default function Home() {
       <div className="about-right reveal"><p className="about-lead">I love turning complex problems into simple, reliable, and genuinely useful software.</p><p>My work spans full-stack and backend development, software architecture, APIs, databases, cloud applications, and system integration. I care about clean boundaries, maintainable code, performance, and systems that work in production.</p><p>I’m also bringing AI into practical products—integrating LLMs, RAG, agents, and intelligent services into real-world workflows.</p><div className="values"><span>↗ Thoughtful engineering</span><span>↗ Practical AI</span><span>↗ Reliable delivery</span></div></div>
     </section>
 
+    <section className="education-section" id="education">
+      <div className="section-heading reveal">
+        <div><span className="label-pill">✳ THE LEARNING JOURNEY</span><h2>Grounded in learning.<br/><span>Built across cultures.</span></h2></div>
+        <p>Computer science foundations<br/>from Germany and Japan.</p>
+      </div>
+      <div className="education-layout">
+        <div className="education-list">
+          <article className="education-card reveal">
+            <div className="education-meta"><span>2013 — 2016</span><span>FREIBURG, GERMANY</span></div>
+            <h3>University of Freiburg</h3>
+            <p className="education-degree">Computer Science Studies · 6 Semesters</p>
+            <p className="education-detail">Department of Computer Science, Faculty of Engineering</p>
+          </article>
+          <article className="education-card reveal">
+            <div className="education-meta"><span>2009 — 2013</span><span>OSAKA, JAPAN</span></div>
+            <h3>The University of Osaka <span className="education-native">(大阪大学)</span></h3>
+            <p className="education-degree">Bachelor’s Degree in Computer Science</p>
+          </article>
+          <article className="education-card reveal">
+            <div className="education-meta"><span>2006 — 2009</span><span>OSAKA, JAPAN</span></div>
+            <h3>Osaka Prefectural Kitano High School</h3>
+            <p className="education-degree">Senior High School Diploma</p>
+            <p className="education-detail">大阪府立北野高等学校</p>
+          </article>
+        </div>
+        <aside className="language-panel reveal">
+          <span className="language-panel-mark">言</span>
+          <span className="label-pill label-dark">✳ LANGUAGES</span>
+          <h3>Words connect<br/>worlds.</h3>
+          <div className="language-list">
+            <div className="language-item"><span className="language-name">Japanese</span><span className="language-level">Native</span><span className="language-track"><i style={{width:"100%"}} /></span></div>
+            <div className="language-item"><span className="language-name">English</span><span className="language-level">Conversational</span><span className="language-track"><i style={{width:"68%"}} /></span></div>
+            <div className="language-item"><span className="language-name">German</span><span className="language-level">Conversational</span><span className="language-track"><i style={{width:"68%"}} /></span></div>
+          </div>
+          <p className="language-note">Japanese roots. International perspective.</p>
+        </aside>
+      </div>
+    </section>
+
     <section className="expertise-section" id="expertise"><div className="section-heading reveal"><div><span className="label-pill">✳ WHAT I BRING</span><h2>My toolbox is<br/><span>pretty versatile.</span></h2></div><p>Strong foundations, modern stacks,<br/>and a continuous learning mindset.</p></div>
       <div className="skills-grid">{skills.map((s,i)=><div className={`skill-card skill-${i%5} reveal`} key={s[0]} style={{ transitionDelay: `${(i % 4) * 70}ms` }}><span className="skill-num">{s[0]}</span><h3>{s[1]}</h3><p>{s[2]}</p><span className="skill-spark">{["✳","⌘","↗","✦","◉"][i%5]}</span></div>)}</div>
     </section>

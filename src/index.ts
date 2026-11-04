@@ -1,9 +1,7 @@
-import Backbone from "backbone";
-
 export class Todo extends Backbone.Model {
     defaults() {
         return {
-            title: "",
+            title: "My Portfolio",
             done: false,
         };
     }

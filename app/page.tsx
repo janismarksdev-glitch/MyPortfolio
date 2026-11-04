@@ -37,7 +37,48 @@ export default function Home() {
       { threshold: 0.12, rootMargin: "0px 0px -35px 0px" }
     );
     items.forEach((item) => observer.observe(item));
-    return () => observer.disconnect();
+
+    const cards = document.querySelectorAll<HTMLElement>(".project-card, .skill-card");
+    const handlePointerMove = (event: PointerEvent) => {
+      const card = event.currentTarget as HTMLElement;
+      const bounds = card.getBoundingClientRect();
+      const x = event.clientX - bounds.left;
+      const y = event.clientY - bounds.top;
+      card.style.setProperty("--pointer-x", `${x}px`);
+      card.style.setProperty("--pointer-y", `${y}px`);
+      if (card.classList.contains("project-card")) {
+        const rotateY = ((x / bounds.width) - 0.5) * 5;
+        const rotateX = (0.5 - (y / bounds.height)) * 4;
+        card.style.setProperty("--tilt-x", `${rotateX}deg`);
+        card.style.setProperty("--tilt-y", `${rotateY}deg`);
+      }
+    };
+    const resetCard = (event: PointerEvent) => {
+      const card = event.currentTarget as HTMLElement;
+      card.style.setProperty("--tilt-x", "0deg");
+      card.style.setProperty("--tilt-y", "0deg");
+    };
+    cards.forEach((card) => {
+      card.addEventListener("pointermove", handlePointerMove);
+      card.addEventListener("pointerleave", resetCard);
+    });
+
+    const updateScrollProgress = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+      document.documentElement.style.setProperty("--scroll-progress", `${progress * 100}%`);
+    };
+    updateScrollProgress();
+    window.addEventListener("scroll", updateScrollProgress, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      cards.forEach((card) => {
+        card.removeEventListener("pointermove", handlePointerMove);
+        card.removeEventListener("pointerleave", resetCard);
+      });
+      window.removeEventListener("scroll", updateScrollProgress);
+    };
   }, []);
 
   return <main className="portfolio">

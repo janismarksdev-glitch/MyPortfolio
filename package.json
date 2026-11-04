@@ -9,12 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "backbone": "^1.6.1",
     "next": "^15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.3.4"
   },
   "devDependencies": {
+    "@types/backbone": "^1.4.23",
     "@types/node": "^22.13.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

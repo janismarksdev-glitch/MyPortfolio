@@ -11,6 +11,8 @@ const skills = [
   ["05", "Data & persistence", "PostgreSQL · MySQL · SQL Server · MongoDB · Redis · SQLite · EF Core · Prisma · Query optimization"],
   ["06", "Cloud & delivery", "Git · Docker · Kubernetes · AWS · Azure · CI/CD · GitHub Actions · Linux · Terraform"],
   ["07", "Quality & security", "Unit / integration / E2E testing · Jest · Vitest · Playwright · xUnit · OWASP · TDD"],
+  ["08", "Distributed systems", "Kafka · RabbitMQ · Caching · Load balancing · Observability · Monitoring · Mentoring · Reviews"],
+  ["09", "AI & LLM integration", "OpenAI · Anthropic · Gemini · Agents · Tool calling · LangChain · LangGraph · Structured outputs"],
   ["10", "RAG & AI infrastructure", "Embeddings · Vector search · Pinecone · Qdrant · Chroma · Retrieval · Evaluation · Guardrails"],
 ];
 
